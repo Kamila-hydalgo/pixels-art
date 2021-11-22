@@ -10,3 +10,5 @@ for (let index = 1; index <= lines; index += 1) {
   }
   pixelBoard.appendChild(divLine);
 }
+const selected = document.getElementById('black');
+selected.classList.add('selected');
