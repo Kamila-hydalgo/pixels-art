@@ -21,3 +21,12 @@
 #pink {
   background-color: pink;
 }
+
+.pixel {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: solid black 1px;
+  background-color: white;
+}
+
