@@ -1,9 +1,19 @@
+body {
+  background-color: rgb(3, 107, 82);
+}
+
+h1 {
+  text-align: center;
+  background-color: white;
+}
+
 .color {
   display: inline-block;
   border: solid black 1px;
   height: 100px;
   width: 100px;
   margin: 5px;
+  border-radius: 100%;
 }
 
 .pixel {
@@ -14,3 +24,17 @@
   background-color: white;
 }
 
+#color-palette {
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+#pixel-board {
+  margin-top: 30px;
+  margin-left: 210px;
+}
+
+#clear-board {
+  margin-top: 20px;
+  margin-left: 280px;
+}

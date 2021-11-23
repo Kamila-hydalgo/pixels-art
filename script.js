@@ -1,14 +1,15 @@
 // Requisito 2 e 3
-let firstColor = document.querySelectorAll('.color')[0];
+// Referência: Refatoração desses requisitos para adicionar a cor via JV, após um code review do colega Guthias.
+const firstColor = document.querySelectorAll('.color')[0];
 firstColor.style.backgroundColor = 'black';
 
-let secondColor = document.querySelectorAll('.color')[1];
+const secondColor = document.querySelectorAll('.color')[1];
 secondColor.style.backgroundColor = 'green';
 
-let thirdColor = document.querySelectorAll('.color')[2];
+const thirdColor = document.querySelectorAll('.color')[2];
 thirdColor.style.backgroundColor = 'blue';
 
-let fourthColor = document.querySelectorAll('.color')[3];
+const fourthColor = document.querySelectorAll('.color')[3];
 fourthColor.style.backgroundColor = 'pink';
 
 // Requisito 4
@@ -41,20 +42,19 @@ thirdColor.addEventListener('click', selectColor);
 fourthColor.addEventListener('click', selectColor);
 
 // Requisito 8
-
+// Referência: Agradecimento especial ao colega Gustavo Mathias(Guthias) para a realização desse requisito.
 const pixelSelected = document.querySelectorAll('.pixel');
 for (let index = 0; index < pixelSelected.length; index += 1) {
   pixelSelected[index].addEventListener('click', paintPixel);
 }
-
 function paintPixel(event) {
   const colorSelected = document.querySelector('.selected');
-  let addColor = colorSelected.style.backgroundColor;
+  const addColor = colorSelected.style.backgroundColor;
   event.target.style.backgroundColor = addColor;
 }
 
 // Requisito 12
-// Referência
+// Referência: Agradecimento aos colegas Gabriel Resende e Byanca Knorst pelo entendimento do Math.round e Math.random.
 function randomColor() {
   const aleatColor1 = Math.round(Math.random() * 255);
   const aleatColor2 = Math.round(Math.random() * 255);
@@ -62,9 +62,6 @@ function randomColor() {
   const newColor = `rgb(${aleatColor1},${aleatColor2},${aleatColor3})`;
   return newColor;
 }
-
 secondColor.style.backgroundColor = randomColor();
-
 thirdColor.style.backgroundColor = randomColor();
-
-// fourthColor.style.backgroundColor = randomColor();
+fourthColor.style.backgroundColor = randomColor();
