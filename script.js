@@ -13,7 +13,7 @@ const fourthColor = document.querySelectorAll('.color')[3];
 fourthColor.style.backgroundColor = 'pink';
 
 // Requisito 4
-const pixelBoard = document.getElementById('pixel-board');
+const pixelBoard = document.querySelector('#pixel-board');
 const lines = 5;
 const coluns = 5;
 for (let index = 1; index <= lines; index += 1) {
@@ -52,6 +52,16 @@ function paintPixel(event) {
   const addColor = colorSelected.style.backgroundColor;
   event.target.style.backgroundColor = addColor;
 }
+
+// Requisito 9
+
+const clearButton = document.querySelector('#clear-board');
+function clearPixels() {
+  for (let index = 0; index < pixelSelected.length; index += 1) {
+    pixelSelected[index].style.backgroundColor = 'white';
+  }
+}
+clearButton.addEventListener('click', clearPixels);
 
 // Requisito 12
 // Referência: Agradecimento aos colegas Gabriel Resende e Byanca Knorst pelo entendimento do Math.round e Math.random.
